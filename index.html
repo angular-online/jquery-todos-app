@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <title>jQuery Todos App</title>
+  </head>
+  <body>
+    <header class="fixed-top">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12">
+                  <div class="row">
+                      <div class="col-lg-6">
+                          <h3>
+                              <a href="#">TODOS APP</a>
+                          </h3>
+                      </div>
+                      <div class="col-lg-6 top-nav">
+                          <nav>
+                              <ul class="nav nav-pills float-right">
+                                  <li class="nav-item">
+                                      <a class="nav-link active" href="./add-edit-todo.html?id=0">Add Todo </a>
+                                  </li>
+                              </ul>
+                          </nav>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </header>
+    
+    <main role="main" class="container">
+      <input type="text" id="search-box" class="form-control search-box" placeholder="Search todos..."/>
+      <ul class="list-group list-group-flush todo-list">
+        <li class="list-group-item">
+          <span class="align-left compleated">pay power bill</span>
+          <span class="badge badge-primary badge-pill">
+            <span>Urgent, Important</span>
+          </span>
+          <span class="badge badge-primary badge-pill">Home</span>
+          <span class="badge badge-primary badge-pill">08 Aug 2019</span>
+          <span><a href="./add-edit-todo.html?id=123">Edit</a></span>
+          <span class="text-danger delete-btn" todo-id="123">Delete</span>
+        </li>
+      </ul>
+      <div class="text-center loading-img">
+        <img src="./img/loader.gif" />
+      </div>
+      <div class="alert alert-info text-center no-todos-message" role="alert">No Todos Found....!</div>
+      <div class="alert alert-danger text-center todos-fail-message" role="alert">Failed to load Todos</div>
+    </main>
+    
+    <footer class="fixed-bottom">
+      <div class="container">
+          <p>Developed with &hearts; on jQuery. By <a target="_blank" href="https://twitter.com/nagarjun_immadi">@nagarjun_immadi</a>. Github <a href="https://github.com/angular-online/jquery-todos-app" target="_blank">Repo</a></p>
+      </div>
+    </footer>
+  
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/todos-list.js"></script>
+  </body>
+</html>
