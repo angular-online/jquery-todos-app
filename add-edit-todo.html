@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./node_modules/jquery-ui-dist/jquery-ui.css">
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <title>jQuery Todos App</title>
+  </head>
+  <body>
+    <header class="fixed-top">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12">
+                  <div class="row">
+                      <div class="col-lg-6">
+                          <h3>
+                              <a href="#">TODOS APP</a>
+                          </h3>
+                      </div>
+                      <div class="col-lg-6 top-nav">
+                          <nav>
+                              <ul class="nav nav-pills float-right">
+                                  <li class="nav-item">
+                                      <a class="nav-link active" href="./index.html">Go To Home</a>
+                                  </li>
+                              </ul>
+                          </nav>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </header>
+    
+    <main role="main" class="container">
+        <div class="row">
+            <div class="col-12">
+                <form class="todos-form">
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Title</label>
+                        <div class="col-sm-10">
+                            <input class="form-control title" name="title" placeholder="Todo title"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Is Completed</label>
+                        <div class="col-sm-10 align-inline-items">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" value="true" name="isCompleted">
+                                <label class="form-check-label">Yes</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" value="false" name="isCompleted" checked>
+                                <label class="form-check-label">No</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Target Date</label>
+                        <div class="col-sm-10">
+                            <div class="input-group">
+                                <input class="form-control" id="targetDate" placeholder="yyyy-mm-dd" name="targetDate" value="">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary" type="button"><i class="far fa-calendar-alt"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Tags</label>
+                        <div class="col-sm-10 align-inline-items tags-checkboxes"></div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Category</label>
+                        <div class="col-sm-10">
+                            <select class="form-control category" name="category" value=""></select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="alert alert-danger text-center save-todo-fail-message" role="alert"></div>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label"></label>
+                        <div class="col-sm-10 align-right">
+                            <button class="btn btn-default">cancel</button>
+                            <button type="submit" class="btn btn-success">Save Todo</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="text-center loading-img">
+            <img src="./img/loader.gif" />
+        </div>
+        <div class="alert alert-danger text-center todos-fail-message" role="alert">Failed to load Todo data</div>
+    </main>
+    
+    <footer class="fixed-bottom">
+      <div class="container">
+          <p>Developed with &hearts; on jQuery. By <a target="_blank" href="https://twitter.com/nagarjun_immadi">@nagarjun_immadi</a>. Github <a href="https://github.com/angular-online/jquery-todos-app" target="_blank">Repo</a></p>
+      </div>
+    </footer>
+  
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./node_modules/jquery-ui-dist/jquery-ui.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="./js/add-edit-todo.js"></script>
+  </body>
+</html>

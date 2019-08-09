@@ -124,6 +124,6 @@ footer .container{
     display: none;
 }
 
-.todos-fail-message, .no-todos-message {
+.todos-fail-message, .no-todos-message, .save-todo-fail-message {
     display: none;
 }
